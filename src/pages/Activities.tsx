@@ -16,14 +16,14 @@ const Activities = () => {
 
   const renderActivities = (activities: PracticalActivity[], title: string, description: string) => (
     <div>
-      <p className="text-muted-foreground mb-6">{description}</p>
-      <div className="space-y-4">
+      <p className="text-sm md:text-base text-muted-foreground mb-4 md:mb-6">{description}</p>
+      <div className="space-y-3 md:space-y-4">
         {activities.map((activity, index) => (
-          <div key={index} className="p-4 bg-accent/30 rounded-lg border border-border/50">
-            <div className="flex items-start justify-between gap-4 mb-2">
-              <h4 className="font-semibold text-foreground">{activity.title}</h4>
-              <div className="flex gap-2 flex-shrink-0">
-                <Badge variant="outline" className="text-xs">
+          <div key={index} className="p-4 md:p-5 bg-gradient-to-br from-accent/40 to-secondary/20 rounded-xl border-2 border-primary/10 hover:border-primary/30 transition-all shadow-md hover:shadow-lg">
+            <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-4 mb-3">
+              <h4 className="font-semibold text-base md:text-lg text-foreground">{activity.title}</h4>
+              <div className="flex gap-2 flex-shrink-0 flex-wrap">
+                <Badge variant="outline" className="text-xs bg-background/60">
                   {activity.environment === "both" ? "Home & Daycare" : 
                    activity.environment === "home" ? "Home" : "Daycare"}
                 </Badge>
@@ -32,10 +32,10 @@ const Activities = () => {
                 </Badge>
               </div>
             </div>
-            <p className="text-sm text-muted-foreground mb-3">{activity.description}</p>
-            <div className="p-3 bg-primary/5 rounded border-l-4 border-primary">
-              <p className="text-sm text-foreground">
-                <strong>How it helps:</strong> {activity.howItHelps}
+            <p className="text-xs md:text-sm text-muted-foreground mb-3">{activity.description}</p>
+            <div className="p-3 bg-primary/10 rounded-lg border-l-4 border-primary shadow-sm">
+              <p className="text-xs md:text-sm text-foreground">
+                <strong className="text-primary">How it helps:</strong> {activity.howItHelps}
               </p>
             </div>
           </div>
@@ -45,22 +45,22 @@ const Activities = () => {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5 py-12">
+    <div className="min-h-screen bg-gradient-to-br from-background via-accent/20 to-secondary/30 py-8 md:py-12">
       <div className="container mx-auto px-4 max-w-5xl">
-        <div className="text-center mb-8">
-          <div className="inline-flex p-4 bg-primary/10 rounded-full mb-4">
-            <Lightbulb className="w-12 h-12 text-primary" />
+        <div className="text-center mb-6 md:mb-8">
+          <div className="inline-flex p-4 bg-gradient-to-r from-primary/20 via-accent/20 to-secondary/20 rounded-full mb-4 shadow-lg">
+            <Lightbulb className="w-10 h-10 md:w-12 md:h-12 text-primary" />
           </div>
-          <h1 className="text-3xl font-bold mb-2 text-foreground">Practical Activities & Exercises</h1>
-          <p className="text-muted-foreground">Evidence-based activities for supporting children's development</p>
+          <h1 className="text-2xl md:text-3xl font-bold mb-2 text-primary">Practical Activities & Exercises</h1>
+          <p className="text-sm md:text-base text-muted-foreground">Evidence-based activities for supporting children's development</p>
         </div>
 
-        <Card className="p-8">
+        <Card className="p-4 md:p-8 shadow-xl border-primary/20">
           <Tabs defaultValue="stress" className="w-full">
-            <TabsList className="grid w-full grid-cols-3 mb-6">
-              <TabsTrigger value="stress">Stress Relief</TabsTrigger>
-              <TabsTrigger value="language">Language Support</TabsTrigger>
-              <TabsTrigger value="balanced">Balanced Support</TabsTrigger>
+            <TabsList className="grid w-full grid-cols-3 mb-4 md:mb-6 bg-accent/50">
+              <TabsTrigger value="stress" className="text-xs md:text-sm">Stress Relief</TabsTrigger>
+              <TabsTrigger value="language" className="text-xs md:text-sm">Language Support</TabsTrigger>
+              <TabsTrigger value="balanced" className="text-xs md:text-sm">Balanced Support</TabsTrigger>
             </TabsList>
 
             <TabsContent value="stress">
