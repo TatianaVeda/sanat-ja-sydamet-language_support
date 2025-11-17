@@ -43,11 +43,10 @@ const Index = () => {
             <Brain className="w-10 h-10 text-primary" />
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
-            Child Development Support Guide
+            Tunne + Kieli = Sanat ja Sydämet
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Helping educators and parents distinguish between language development needs 
-            and stress-related challenges in young children
+            Understanding what your child truly needs
           </p>
         </div>
 
