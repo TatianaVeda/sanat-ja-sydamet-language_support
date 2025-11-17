@@ -42,12 +42,8 @@ const Index = () => {
             <Heart className="w-10 h-10 text-primary" />
             <Brain className="w-10 h-10 text-primary" />
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
-            Tunne + Kieli = Sanat ja Sydämet
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-2">
-            Understanding what your child truly needs
-          </p>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">Tunne + Kieli = Sanat ja Sydämet</h1>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-2">Understand what your child truly needs</p>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             Does your child need help learning language, or help feeling calm and safe first?
           </p>
@@ -58,12 +54,12 @@ const Index = () => {
           <h2 className="text-2xl font-semibold mb-4 text-foreground">The Challenge</h2>
           <div className="space-y-4 text-muted-foreground">
             <p>
-              In early childhood education, children are often labeled as having "special needs" when they 
-              struggle to communicate or engage. However, the root cause isn&apos;t always a developmental delay.
+              In early childhood education, children are often labeled as having "special needs" when they struggle to
+              communicate or engage. However, the root cause isn&apos;t always a developmental delay.
             </p>
             <p>
-              Many children possess strong language skills and abilities in their native language, but face 
-              temporary barriers when:
+              Many children possess strong language skills and abilities in their native language, but face temporary
+              barriers when:
             </p>
             <ul className="space-y-2 ml-6">
               <li className="flex gap-3">
@@ -80,8 +76,8 @@ const Index = () => {
               </li>
             </ul>
             <p className="font-semibold text-foreground mt-4">
-              The question isn&apos;t always "Does this child need a speech therapist?" but rather 
-              "Does this child need stress support first, or focused language help?"
+              The question isn&apos;t always "Does this child need a speech therapist?" but rather "Does this child need
+              stress support first, or focused language help?"
             </p>
           </div>
         </Card>
@@ -89,7 +85,7 @@ const Index = () => {
         {/* Menu Cards */}
         <div className="grid md:grid-cols-3 gap-6 mb-12">
           {menuItems.map((item, index) => (
-            <Card 
+            <Card
               key={index}
               className={`p-6 bg-gradient-to-br ${item.gradient} border-border/50 hover:border-primary/50 transition-all duration-300 hover:scale-105`}
             >
@@ -99,11 +95,7 @@ const Index = () => {
                 </div>
                 <h3 className="text-xl font-semibold mb-3 text-foreground">{item.title}</h3>
                 <p className="text-muted-foreground mb-6 flex-grow">{item.description}</p>
-                <Button 
-                  onClick={item.action}
-                  className="w-full group"
-                  size="lg"
-                >
+                <Button onClick={item.action} className="w-full group" size="lg">
                   {item.buttonText}
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
@@ -115,9 +107,9 @@ const Index = () => {
         {/* Additional Info */}
         <Card className="p-6 bg-primary/5 border-primary/20">
           <p className="text-sm text-muted-foreground text-center">
-            <strong className="text-foreground">Important:</strong> This tool provides guidance and is not 
-            a substitute for professional assessment. Always consult qualified specialists 
-            (psychologists, speech therapists, pediatricians) for comprehensive evaluation.
+            <strong className="text-foreground">Important:</strong> This tool provides guidance and is not a substitute
+            for professional assessment. Always consult qualified specialists (psychologists, speech therapists,
+            pediatricians) for comprehensive evaluation.
           </p>
         </Card>
       </div>
