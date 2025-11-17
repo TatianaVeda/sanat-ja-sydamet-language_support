@@ -64,10 +64,10 @@ const Index = () => {
           {menuItems.map((item, index) => (
             <Card
               key={index}
-              className={`p-6 bg-gradient-to-br ${item.gradient} border-border/50 hover:border-primary/50 transition-all duration-300 hover:scale-105`}
+              className={`p-6 bg-gradient-to-br ${item.gradient} border-2 border-transparent hover:border-primary/60 transition-all duration-300 hover:scale-105 shadow-md hover:shadow-2xl relative overflow-hidden`}
             >
               <div className="flex flex-col h-full">
-                <div className="inline-flex p-3 bg-background/60 rounded-lg mb-4 self-start">
+                <div className="inline-flex p-3 bg-background/80 rounded-lg mb-4 self-start shadow-md">
                   <item.icon className="w-8 h-8 text-primary" />
                 </div>
                 <h3 className="text-xl font-semibold mb-3 text-foreground">{item.title}</h3>
@@ -76,6 +76,10 @@ const Index = () => {
                   {item.buttonText}
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
+              </div>
+              {/* Decorative icon in bottom right corner */}
+              <div className="absolute bottom-4 right-4 opacity-20">
+                <item.icon className="w-16 h-16 text-primary" />
               </div>
             </Card>
           ))}
