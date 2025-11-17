@@ -47,10 +47,10 @@ const Index = () => {
       {/* Hero Section */}
       <div className="container mx-auto px-4 py-12 max-w-6xl relative z-10">
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-3 p-4 bg-gradient-to-r from-primary/20 via-accent/20 to-secondary/20 rounded-full mb-6 shadow-lg">
-            <Flower className="w-10 h-10 text-secondary" strokeWidth={2.5} />
+          <div className="inline-flex items-center gap-3 mb-6">
+            <Flower className="w-10 h-10 text-primary" strokeWidth={2.5} />
             <Heart className="w-10 h-10 text-primary animate-pulse" />
-            <Brain className="w-10 h-10 text-accent" />
+            <Brain className="w-10 h-10 text-primary" />
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">Tunne + Kieli = Sanat ja Sydämet</h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-2">Understand what your child truly needs</p>
