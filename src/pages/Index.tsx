@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useNavigate } from "react-router-dom";
-import { Brain, Heart, BookOpen, Languages, ArrowRight } from "lucide-react";
+import { Brain, Heart, BookOpen, Languages, ArrowRight, Flower2 } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 import contentBg from "@/assets/content-bg.jpg";
 import daisyLogo from "@/assets/daisy-logo.png";
@@ -47,8 +47,10 @@ const Index = () => {
       {/* Hero Section */}
       <div className="container mx-auto px-4 py-12 max-w-6xl relative z-10">
         <div className="text-center mb-12">
-          <div className="inline-flex items-center justify-center p-4 bg-gradient-to-r from-primary/20 via-accent/20 to-secondary/20 rounded-full mb-6 shadow-lg">
-            <img src={daisyLogo} alt="Daisy Logo" className="w-16 h-16" />
+          <div className="inline-flex items-center gap-3 p-4 bg-gradient-to-r from-primary/20 via-accent/20 to-secondary/20 rounded-full mb-6 shadow-lg">
+            <Flower2 className="w-10 h-10 text-secondary" />
+            <Heart className="w-10 h-10 text-primary animate-pulse" />
+            <Brain className="w-10 h-10 text-accent" />
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">Tunne + Kieli = Sanat ja Sydämet</h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-2">Understand what your child truly needs</p>
