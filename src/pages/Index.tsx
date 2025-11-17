@@ -49,39 +49,6 @@ const Index = () => {
           </p>
         </div>
 
-        {/* Problem Statement */}
-        <Card className="p-8 mb-12 bg-accent/20">
-          <h2 className="text-2xl font-semibold mb-4 text-foreground">The Challenge</h2>
-          <div className="space-y-4 text-muted-foreground">
-            <p>
-              In early childhood education, children are often labeled as having "special needs" when they struggle to
-              communicate or engage. However, the root cause isn&apos;t always a developmental delay.
-            </p>
-            <p>
-              Many children possess strong language skills and abilities in their native language, but face temporary
-              barriers when:
-            </p>
-            <ul className="space-y-2 ml-6">
-              <li className="flex gap-3">
-                <span className="text-primary font-semibold mt-1">•</span>
-                <span>Experiencing stress from life changes (new sibling, relocation, family illness)</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-primary font-semibold mt-1">•</span>
-                <span>Navigating multiple languages at home and in daycare</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-primary font-semibold mt-1">•</span>
-                <span>Adapting to a new cultural and linguistic environment</span>
-              </li>
-            </ul>
-            <p className="font-semibold text-foreground mt-4">
-              The question isn&apos;t always "Does this child need a speech therapist?" but rather "Does this child need
-              stress support first, or focused language help?"
-            </p>
-          </div>
-        </Card>
-
         {/* Menu Cards */}
         <div className="grid md:grid-cols-3 gap-6 mb-12">
           {menuItems.map((item, index) => (
@@ -104,8 +71,87 @@ const Index = () => {
           ))}
         </div>
 
+        {/* Educational Resources */}
+        <Card className="p-8 mb-8 bg-gradient-to-br from-primary/5 via-accent/5 to-secondary/5 border-primary/10 shadow-lg">
+          <div className="flex items-center gap-3 mb-4">
+            <BookOpen className="w-6 h-6 text-primary" />
+            <h2 className="text-2xl font-semibold text-foreground">Educational Resources</h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-4">
+            <a 
+              href="https://www.asha.org/public/speech/development/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="p-4 bg-background/60 rounded-lg border border-border hover:border-primary/50 transition-all hover:shadow-md"
+            >
+              <h3 className="font-semibold text-foreground mb-2">Speech & Language Development</h3>
+              <p className="text-sm text-muted-foreground">ASHA resources on typical speech and language milestones</p>
+            </a>
+            <a 
+              href="https://www.zerotothree.org/resource/early-childhood-mental-health/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="p-4 bg-background/60 rounded-lg border border-border hover:border-primary/50 transition-all hover:shadow-md"
+            >
+              <h3 className="font-semibold text-foreground mb-2">Early Childhood Mental Health</h3>
+              <p className="text-sm text-muted-foreground">Zero to Three resources on emotional development and stress</p>
+            </a>
+            <a 
+              href="https://www.naeyc.org/resources/topics/dual-language-learners" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="p-4 bg-background/60 rounded-lg border border-border hover:border-primary/50 transition-all hover:shadow-md"
+            >
+              <h3 className="font-semibold text-foreground mb-2">Multilingual Children</h3>
+              <p className="text-sm text-muted-foreground">NAEYC guidance on supporting dual language learners</p>
+            </a>
+            <a 
+              href="https://www.understood.org/en/articles/child-development-tracker" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="p-4 bg-background/60 rounded-lg border border-border hover:border-primary/50 transition-all hover:shadow-md"
+            >
+              <h3 className="font-semibold text-foreground mb-2">Developmental Milestones</h3>
+              <p className="text-sm text-muted-foreground">Track typical developmental progress by age</p>
+            </a>
+          </div>
+        </Card>
+
+        {/* Problem Statement - The Challenge */}
+        <Card className="p-6 mb-8 bg-gradient-to-br from-accent/30 to-secondary/20 border-primary/20 shadow-lg">
+          <h2 className="text-xl font-semibold mb-3 text-foreground">The Challenge</h2>
+          <div className="space-y-3 text-muted-foreground text-sm">
+            <p>
+              In early childhood education, children are often labeled as having "special needs" when they struggle to
+              communicate or engage. However, the root cause isn&apos;t always a developmental delay.
+            </p>
+            <p>
+              Many children possess strong language skills and abilities in their native language, but face temporary
+              barriers when:
+            </p>
+            <ul className="space-y-1.5 ml-6">
+              <li className="flex gap-2">
+                <span className="text-primary font-semibold">•</span>
+                <span>Experiencing stress from life changes (new sibling, relocation, family illness)</span>
+              </li>
+              <li className="flex gap-2">
+                <span className="text-primary font-semibold">•</span>
+                <span>Navigating multiple languages at home and in daycare</span>
+              </li>
+              <li className="flex gap-2">
+                <span className="text-primary font-semibold">•</span>
+                <span>Adapting to a new cultural and linguistic environment</span>
+              </li>
+            </ul>
+            <p className="font-semibold text-foreground">
+              The question isn&apos;t always "Does this child need a speech therapist?" but rather "Does this child need
+              stress support first, or focused language help?"
+            </p>
+          </div>
+        </Card>
+
         {/* Additional Info */}
-        <Card className="p-6 bg-primary/5 border-primary/20">
+        <Card className="p-4 bg-gradient-to-r from-primary/10 via-accent/10 to-secondary/10 border-primary/20 shadow-lg">
           <p className="text-sm text-muted-foreground text-center">
             <strong className="text-foreground">Important:</strong> This tool provides guidance and is not a substitute
             for professional assessment. Always consult qualified specialists (psychologists, speech therapists,
