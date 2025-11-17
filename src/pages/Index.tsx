@@ -34,28 +34,24 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-accent/20 to-secondary/30">
+    <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5">
       {/* Hero Section */}
-      <div className="container mx-auto px-4 py-8 md:py-12 max-w-6xl">
-        <div className="text-center mb-8 md:mb-12">
-          <div className="inline-flex items-center gap-3 p-4 bg-gradient-to-r from-primary/20 via-accent/20 to-secondary/20 rounded-full mb-6 shadow-lg">
-            <Heart className="w-8 h-8 md:w-10 md:h-10 text-primary animate-pulse" />
-            <Brain className="w-8 h-8 md:w-10 md:h-10 text-accent-foreground" />
+      <div className="container mx-auto px-4 py-12 max-w-6xl">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center gap-3 p-4 bg-primary/10 rounded-full mb-6">
+            <Heart className="w-10 h-10 text-primary" />
+            <Brain className="w-10 h-10 text-primary" />
           </div>
-          <h1 className="text-3xl md:text-5xl font-bold mb-4 text-foreground bg-gradient-to-r from-primary via-accent-foreground to-secondary bg-clip-text text-transparent">
-            Tunne + Kieli = Sanat ja Sydämet
-          </h1>
-          <p className="text-lg md:text-xl font-semibold text-primary max-w-3xl mx-auto mb-2">
-            Understand what your child truly needs
-          </p>
-          <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto">
-            Does your child need help learning language, or help feeling calm and safe first?
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">Tunne + Kieli = Sanat ja Sydämet</h1>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-2">Understand what your child truly needs</p>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            Does your kid need help learning language, or help feeling calm and safe first?
           </p>
         </div>
 
         {/* Problem Statement */}
-        <Card className="p-6 md:p-8 mb-8 md:mb-12 bg-gradient-to-br from-accent/30 to-secondary/20 border-primary/20 shadow-xl">
-          <h2 className="text-xl md:text-2xl font-semibold mb-4 text-primary">The Challenge</h2>
+        <Card className="p-8 mb-12 bg-accent/20">
+          <h2 className="text-2xl font-semibold mb-4 text-foreground">The Challenge</h2>
           <div className="space-y-4 text-muted-foreground">
             <p>
               In early childhood education, children are often labeled as having "special needs" when they struggle to
@@ -87,19 +83,19 @@ const Index = () => {
         </Card>
 
         {/* Menu Cards */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-8 md:mb-12">
+        <div className="grid md:grid-cols-3 gap-6 mb-12">
           {menuItems.map((item, index) => (
             <Card
               key={index}
-              className={`p-5 md:p-6 bg-gradient-to-br ${item.gradient} border-2 border-transparent hover:border-primary/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl`}
+              className={`p-6 bg-gradient-to-br ${item.gradient} border-border/50 hover:border-primary/50 transition-all duration-300 hover:scale-105`}
             >
               <div className="flex flex-col h-full">
-                <div className="inline-flex p-3 bg-gradient-to-br from-background/80 to-background/60 rounded-xl mb-4 self-start shadow-md">
-                  <item.icon className="w-7 h-7 md:w-8 md:h-8 text-primary" />
+                <div className="inline-flex p-3 bg-background/60 rounded-lg mb-4 self-start">
+                  <item.icon className="w-8 h-8 text-primary" />
                 </div>
-                <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-3 text-foreground">{item.title}</h3>
-                <p className="text-sm md:text-base text-muted-foreground mb-4 md:mb-6 flex-grow">{item.description}</p>
-                <Button onClick={item.action} className="w-full group shadow-lg" size="lg">
+                <h3 className="text-xl font-semibold mb-3 text-foreground">{item.title}</h3>
+                <p className="text-muted-foreground mb-6 flex-grow">{item.description}</p>
+                <Button onClick={item.action} className="w-full group" size="lg">
                   {item.buttonText}
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
@@ -109,9 +105,9 @@ const Index = () => {
         </div>
 
         {/* Additional Info */}
-        <Card className="p-4 md:p-6 bg-gradient-to-r from-primary/10 via-accent/10 to-secondary/10 border-primary/30 shadow-lg">
-          <p className="text-xs md:text-sm text-muted-foreground text-center">
-            <strong className="text-primary">Important:</strong> This tool provides guidance and is not a substitute
+        <Card className="p-6 bg-primary/5 border-primary/20">
+          <p className="text-sm text-muted-foreground text-center">
+            <strong className="text-foreground">Important:</strong> This tool provides guidance and is not a substitute
             for professional assessment. Always consult qualified specialists (psychologists, speech therapists,
             pediatricians) for comprehensive evaluation.
           </p>
