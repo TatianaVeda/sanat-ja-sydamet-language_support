@@ -200,3 +200,112 @@ export const balancedActivities: PracticalActivity[] = [
     category: "quiet"
   }
 ];
+
+export const multilingualSupportActivities: PracticalActivity[] = [
+  {
+    title: "Home Language Validation",
+    description: "Welcome and celebrate all languages the child speaks. Display words in Farsi, Russian, and Finnish on classroom materials.",
+    howItHelps: "Children feel their identity is valued when their home languages are respected. This emotional security reduces stress and creates a safe foundation for learning the new language. Seeing familiar scripts reassures them.",
+    environment: "daycare",
+    category: "routine"
+  },
+  {
+    title: "Code-Switching Permission",
+    description: "Allow child to use any language they know to communicate. Don't insist on Finnish-only.",
+    howItHelps: "Forcing Finnish-only creates anxiety and shuts down communication. When children can use any language, they stay engaged and gradually incorporate more Finnish naturally as they feel safe.",
+    environment: "daycare",
+    category: "social"
+  },
+  {
+    title: "Translation Partner System",
+    description: "If possible, pair with another child who shares one of their home languages",
+    howItHelps: "Having someone who understands them reduces isolation and stress dramatically. The peer becomes a bridge between home and daycare cultures, making the environment feel less foreign.",
+    environment: "daycare",
+    category: "social"
+  },
+  {
+    title: "Parent Partnership Program",
+    description: "Regular communication with parents in their preferred language about daily activities and routines",
+    howItHelps: "When parents understand what happens at daycare, they can prepare their child at home. This continuity between home and daycare reduces anxiety about the unknown and builds trust.",
+    environment: "both",
+    category: "routine"
+  },
+  {
+    title: "Language-Neutral Activities",
+    description: "Art, music, building, sensory play that don't require verbal communication to participate",
+    howItHelps: "Children can be successful and included immediately without language barriers. Success builds confidence. While engaged in these activities, language learning happens naturally through observation and play.",
+    environment: "both",
+    category: "creative"
+  },
+  {
+    title: "Visual Daily Schedule with Photos",
+    description: "Picture-based schedule showing the day's activities with actual photos of the daycare spaces and teachers",
+    howItHelps: "Removes language barrier from understanding daily routine. Predictability reduces stress. Children can prepare mentally for transitions without relying on verbal explanations they might not understand.",
+    environment: "daycare",
+    category: "routine"
+  },
+  {
+    title: "Multilingual Story Time",
+    description: "Read same story in multiple languages across different days, or invite parents to read in home language",
+    howItHelps: "Children see reading as a cross-cultural activity. Hearing familiar stories in Finnish helps them connect new words to known concepts. Parents feel welcomed to participate in daycare life.",
+    environment: "daycare",
+    category: "creative"
+  },
+  {
+    title: "One Person, One Language Consistency",
+    description: "Each adult in the child's life consistently uses the same language (e.g., mother-Farsi, father-Russian, teachers-Finnish)",
+    howItHelps: "Clear language patterns help the child's brain organize different language systems. Consistency reduces confusion and helps them understand when to use which language.",
+    environment: "both",
+    category: "routine"
+  },
+  {
+    title: "Cultural Items from Home",
+    description: "Display cultural artifacts, music, foods from the child's background cultures",
+    howItHelps: "Seeing their culture represented signals that they belong. This emotional acceptance is crucial for stress reduction. Children learn Finnish better when they don't feel they must abandon their identity to fit in.",
+    environment: "daycare",
+    category: "routine"
+  },
+  {
+    title: "Simplified Finnish with Gestures",
+    description: "Teachers use basic Finnish vocabulary with exaggerated gestures, slow speech, and lots of repetition",
+    howItHelps: "Comprehensible input is key to language learning. When children understand through context clues, they feel competent. Success reduces stress and motivates continued learning.",
+    environment: "daycare",
+    category: "social"
+  },
+  {
+    title: "Small Group Time",
+    description: "Intentional small group activities (2-4 children) rather than always large group",
+    howItHelps: "Large groups are linguistically and socially overwhelming for multilingual children. Small groups allow more processing time, more turns to speak, and lower pressure to perform in the new language.",
+    environment: "daycare",
+    category: "social"
+  },
+  {
+    title: "Bilingual Books at Home",
+    description: "Parents read books in home languages that connect to daycare themes",
+    howItHelps: "Building concepts in home languages creates cognitive foundation for learning same concepts in Finnish. Strong home language skills predict strong second language acquisition.",
+    environment: "home",
+    category: "creative"
+  },
+  {
+    title: "Consistent Key Phrases",
+    description: "Teach parents the 10-15 key Finnish phrases used at daycare (wash hands, snack time, outside, etc.)",
+    howItHelps: "When parents use same Finnish phrases at home, children learn essential vocabulary in low-stress environment. Hearing phrases before they're needed at daycare builds confidence.",
+    environment: "home",
+    category: "routine"
+  },
+  {
+    title: "Extended Transition Period",
+    description: "Shorter days or parent presence for first 2-4 weeks, gradually increasing time",
+    howItHelps: "Multilingual immersion is doubly stressful. Gradual transition allows nervous system to adjust slowly. Parent presence provides secure base while child explores new language environment.",
+    environment: "daycare",
+    category: "routine"
+  },
+  {
+    title: "Non-Verbal Communication Training",
+    description: "Teach child basic gestures for essential needs (toilet, water, help, more, stop)",
+    howItHelps: "Having ways to communicate basic needs without words prevents frustration and fear. Children can meet their needs while gradually learning Finnish words for same concepts.",
+    environment: "both",
+    category: "social"
+  }
+];
+

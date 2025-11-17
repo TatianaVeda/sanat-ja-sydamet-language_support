@@ -8,6 +8,7 @@ import {
   stressReliefActivities, 
   languageSupportActivities, 
   balancedActivities,
+  multilingualSupportActivities,
   type PracticalActivity 
 } from "@/data/practicalRecommendations";
 
@@ -229,6 +230,62 @@ const Results = () => {
               <strong className="text-foreground">Important:</strong> This assessment is a guide 
               and not a professional diagnosis. Always consult with qualified specialists 
               (psychologists, speech therapists, pediatricians) for a comprehensive evaluation.
+            </p>
+          </div>
+        </Card>
+
+        {/* Multilingual Support Section */}
+        <Card className="p-8 bg-gradient-to-br from-primary/5 to-accent/20">
+          <div className="flex items-center gap-2 mb-6">
+            <Brain className="w-6 h-6 text-primary" />
+            <h3 className="text-xl font-semibold text-foreground">Supporting Multilingual Children</h3>
+          </div>
+          
+          <p className="text-muted-foreground mb-4">
+            Special considerations for children navigating multiple languages at home (e.g., Farsi + Russian) 
+            and learning Finnish at daycare:
+          </p>
+
+          <div className="mb-6 p-4 bg-background/60 rounded-lg border border-primary/20">
+            <h4 className="font-semibold text-foreground mb-2">Why Multilingual Context Matters:</h4>
+            <p className="text-sm text-muted-foreground">
+              Children managing 3+ languages face unique challenges. They're not just learning Finnish—they're 
+              organizing multiple language systems while possibly experiencing cultural transition. This is cognitively 
+              demanding and can create additional stress. However, with proper support, multilingualism is a tremendous 
+              gift that enhances cognitive flexibility and cultural awareness.
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            {multilingualSupportActivities.map((activity, index) => (
+              <div key={index} className="p-4 bg-background/80 rounded-lg border border-border/50">
+                <div className="flex items-start justify-between gap-4 mb-2">
+                  <h4 className="font-semibold text-foreground">{activity.title}</h4>
+                  <div className="flex gap-2 flex-shrink-0">
+                    <Badge variant="outline" className="text-xs">
+                      {activity.environment === "both" ? "Home & Daycare" : 
+                       activity.environment === "home" ? "Home" : "Daycare"}
+                    </Badge>
+                    <Badge variant="secondary" className="text-xs capitalize">
+                      {activity.category}
+                    </Badge>
+                  </div>
+                </div>
+                <p className="text-sm text-muted-foreground mb-3">{activity.description}</p>
+                <div className="p-3 bg-primary/5 rounded border-l-4 border-primary">
+                  <p className="text-sm text-foreground">
+                    <strong>How it helps:</strong> {activity.howItHelps}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-6 p-4 bg-primary/10 rounded-lg border border-primary/30">
+            <p className="text-sm text-foreground">
+              <strong>Key Principle:</strong> Never ask a child to choose between their languages. All languages 
+              are valuable and support each other. Strong home language skills predict strong Finnish acquisition. 
+              The goal is addition (Finnish+), not subtraction (Finnish instead of home languages).
             </p>
           </div>
         </Card>
