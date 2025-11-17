@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useNavigate } from "react-router-dom";
 import { Brain, Heart, BookOpen, Languages, ArrowRight } from "lucide-react";
+import heroBg from "@/assets/hero-bg.jpg";
+import contentBg from "@/assets/content-bg.jpg";
 
 const Index = () => {
   const navigate = useNavigate();
@@ -34,9 +36,15 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5">
+    <div className="min-h-screen bg-gradient-to-br from-background via-accent/20 to-secondary/30 relative">
+      {/* Hero Background */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center opacity-20 pointer-events-none"
+        style={{ backgroundImage: `url(${heroBg})` }}
+      />
+      
       {/* Hero Section */}
-      <div className="container mx-auto px-4 py-12 max-w-6xl">
+      <div className="container mx-auto px-4 py-12 max-w-6xl relative z-10">
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-3 p-4 bg-primary/10 rounded-full mb-6">
             <Heart className="w-10 h-10 text-primary" />
@@ -72,11 +80,16 @@ const Index = () => {
         </div>
 
         {/* Educational Resources */}
-        <Card className="p-8 mb-8 bg-gradient-to-br from-primary/5 via-accent/5 to-secondary/5 border-primary/10 shadow-lg">
-          <div className="flex items-center gap-3 mb-4">
-            <BookOpen className="w-6 h-6 text-primary" />
-            <h2 className="text-2xl font-semibold text-foreground">Educational Resources</h2>
-          </div>
+        <Card className="p-8 mb-8 bg-gradient-to-br from-primary/5 via-accent/5 to-secondary/5 border-primary/10 shadow-lg relative overflow-hidden">
+          <div 
+            className="absolute inset-0 bg-cover bg-center opacity-10 pointer-events-none"
+            style={{ backgroundImage: `url(${contentBg})` }}
+          />
+          <div className="relative z-10">
+            <div className="flex items-center gap-3 mb-4">
+              <BookOpen className="w-6 h-6 text-primary" />
+              <h2 className="text-2xl font-semibold text-foreground">Educational Resources</h2>
+            </div>
           <div className="grid md:grid-cols-2 gap-4">
             <a 
               href="https://www.asha.org/public/speech/development/" 
@@ -114,6 +127,7 @@ const Index = () => {
               <h3 className="font-semibold text-foreground mb-2">Developmental Milestones</h3>
               <p className="text-sm text-muted-foreground">Track typical developmental progress by age</p>
             </a>
+          </div>
           </div>
         </Card>
 
