@@ -16,29 +16,29 @@ const Activities = () => {
 
   const renderActivities = (activities: PracticalActivity[], title: string, description: string) => (
     <div>
-      <p className="text-sm md:text-base text-muted-foreground mb-4 md:mb-6">{description}</p>
-      <div className="space-y-3 md:space-y-4">
+      <p className="text-base text-muted-foreground mb-6">{description}</p>
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
         {activities.map((activity, index) => (
-          <div key={index} className="p-4 md:p-5 bg-gradient-to-br from-accent/40 to-secondary/20 rounded-xl border-2 border-primary/10 hover:border-primary/30 transition-all shadow-md hover:shadow-lg">
-            <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-4 mb-3">
-              <h4 className="font-semibold text-base md:text-lg text-foreground">{activity.title}</h4>
-              <div className="flex gap-2 flex-shrink-0 flex-wrap">
-                <Badge variant="outline" className="text-xs bg-background/60">
-                  {activity.environment === "both" ? "Home & Daycare" : 
-                   activity.environment === "home" ? "Home" : "Daycare"}
-                </Badge>
-                <Badge variant="secondary" className="text-xs capitalize">
-                  {activity.category}
-                </Badge>
-              </div>
+          <Card key={index} className="p-4 bg-gradient-to-br from-accent/40 to-secondary/20 border-2 border-primary/10 hover:border-primary/30 transition-all shadow-md hover:shadow-lg flex flex-col">
+            <div className="flex justify-between items-start gap-2 mb-3">
+              <h4 className="font-semibold text-lg text-foreground flex-grow">{activity.title}</h4>
             </div>
-            <p className="text-xs md:text-sm text-muted-foreground mb-3">{activity.description}</p>
+            <div className="flex gap-2 flex-wrap mb-3">
+              <Badge variant="outline" className="text-xs bg-background/60">
+                {activity.environment === "both" ? "Home & Daycare" : 
+                 activity.environment === "home" ? "Home" : "Daycare"}
+              </Badge>
+              <Badge variant="secondary" className="text-xs capitalize">
+                {activity.category}
+              </Badge>
+            </div>
+            <p className="text-sm text-muted-foreground mb-3 flex-grow">{activity.description}</p>
             <div className="p-3 bg-primary/10 rounded-lg border-l-4 border-primary shadow-sm">
-              <p className="text-xs md:text-sm text-foreground">
+              <p className="text-sm text-foreground">
                 <strong className="text-primary">How it helps:</strong> {activity.howItHelps}
               </p>
             </div>
-          </div>
+          </Card>
         ))}
       </div>
     </div>
