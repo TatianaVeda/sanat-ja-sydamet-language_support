@@ -47,6 +47,15 @@ const Activities = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-accent/20 to-secondary/30 py-8 md:py-12">
       <div className="container mx-auto px-4 max-w-5xl">
+        <Button
+          variant="outline"
+          size="icon"
+          onClick={() => navigate("/")}
+          className="mb-4 border-2 border-primary/20 hover:border-primary/50 hover:bg-primary/10"
+        >
+          <Home className="w-5 h-5" />
+        </Button>
+
         <div className="text-center mb-6 md:mb-8">
           <div className="inline-flex p-4 bg-gradient-to-r from-primary/20 via-accent/20 to-secondary/20 rounded-full mb-4 shadow-lg">
             <Lightbulb className="w-10 h-10 md:w-12 md:h-12 text-primary" />
