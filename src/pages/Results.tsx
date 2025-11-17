@@ -1,8 +1,15 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Brain, Heart, Home, AlertCircle } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Brain, Heart, Home, AlertCircle, Lightbulb } from "lucide-react";
 import { useEffect, useState } from "react";
+import { 
+  stressReliefActivities, 
+  languageSupportActivities, 
+  balancedActivities,
+  type PracticalActivity 
+} from "@/data/practicalRecommendations";
 
 interface AssessmentResult {
   primaryNeed: "language" | "emotional" | "balanced";
@@ -164,9 +171,9 @@ const Results = () => {
           </div>
         </Card>
 
-        {/* Recommendations */}
-        <Card className="p-8">
-          <h3 className="text-xl font-semibold mb-4 text-foreground">Recommendations</h3>
+        {/* General Recommendations */}
+        <Card className="p-8 mb-6">
+          <h3 className="text-xl font-semibold mb-4 text-foreground">General Recommendations</h3>
           <ul className="space-y-3">
             {result.recommendations.map((rec, index) => (
               <li key={index} className="flex gap-3">
@@ -175,6 +182,47 @@ const Results = () => {
               </li>
             ))}
           </ul>
+        </Card>
+
+        {/* Practical Activities */}
+        <Card className="p-8">
+          <div className="flex items-center gap-2 mb-6">
+            <Lightbulb className="w-6 h-6 text-primary" />
+            <h3 className="text-xl font-semibold text-foreground">Practical Activities & Exercises</h3>
+          </div>
+          
+          <p className="text-muted-foreground mb-6">
+            {result.primaryNeed === "emotional" && "Here are specific stress-relief activities tailored for children experiencing emotional stress:"}
+            {result.primaryNeed === "language" && "Here are specific activities to support language development:"}
+            {result.primaryNeed === "balanced" && "Here are activities that address both emotional support and language learning:"}
+          </p>
+
+          <div className="space-y-4">
+            {(result.primaryNeed === "emotional" ? stressReliefActivities : 
+              result.primaryNeed === "language" ? languageSupportActivities : 
+              balancedActivities).map((activity, index) => (
+              <div key={index} className="p-4 bg-accent/30 rounded-lg border border-border/50">
+                <div className="flex items-start justify-between gap-4 mb-2">
+                  <h4 className="font-semibold text-foreground">{activity.title}</h4>
+                  <div className="flex gap-2 flex-shrink-0">
+                    <Badge variant="outline" className="text-xs">
+                      {activity.environment === "both" ? "Home & Daycare" : 
+                       activity.environment === "home" ? "Home" : "Daycare"}
+                    </Badge>
+                    <Badge variant="secondary" className="text-xs capitalize">
+                      {activity.category}
+                    </Badge>
+                  </div>
+                </div>
+                <p className="text-sm text-muted-foreground mb-3">{activity.description}</p>
+                <div className="p-3 bg-primary/5 rounded border-l-4 border-primary">
+                  <p className="text-sm text-foreground">
+                    <strong>How it helps:</strong> {activity.howItHelps}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
 
           <div className="mt-8 p-4 bg-primary/5 rounded-lg border border-primary/20">
             <p className="text-sm text-muted-foreground">
