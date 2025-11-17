@@ -45,8 +45,11 @@ const Index = () => {
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
             Tunne + Kieli = Sanat ja Sydämet
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-2">
             Understanding what your child truly needs
+          </p>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            Does your child need help learning language, or help feeling calm and safe first?
           </p>
         </div>
 
