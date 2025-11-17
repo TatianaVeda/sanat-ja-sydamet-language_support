@@ -28,34 +28,34 @@ const MultilingualSupport = () => {
           </div>
           
           <p className="text-muted-foreground mb-4">
-            Children managing multiple languages at home (e.g., Farsi + Russian) while learning a new language 
-            at daycare (Finnish) face unique challenges:
+            In Finland, children come from diverse linguistic backgrounds. When they're learning Finnish at daycare 
+            while speaking their home language(s) at home, they may face challenges such as:
           </p>
 
           <ul className="space-y-2 text-muted-foreground mb-6">
             <li className="flex gap-3">
               <span className="text-primary font-semibold mt-1">•</span>
-              <span>Cognitive load of organizing 3+ language systems simultaneously</span>
+              <span>Managing multiple language systems at the same time</span>
             </li>
             <li className="flex gap-3">
               <span className="text-primary font-semibold mt-1">•</span>
-              <span>Cultural adaptation alongside linguistic adaptation</span>
+              <span>Adapting to new cultural and linguistic environments</span>
             </li>
             <li className="flex gap-3">
               <span className="text-primary font-semibold mt-1">•</span>
-              <span>Potential feeling of identity loss if home languages aren't valued</span>
+              <span>Feeling uncertainty if their home language isn't valued</span>
             </li>
             <li className="flex gap-3">
               <span className="text-primary font-semibold mt-1">•</span>
-              <span>Communication barriers during high-stress moments (tiredness, frustration, fear)</span>
+              <span>Difficulty expressing themselves during stressful moments</span>
             </li>
           </ul>
 
           <div className="p-4 bg-primary/10 rounded-lg border border-primary/30">
             <p className="text-sm text-foreground">
-              <strong>Key Principle:</strong> Never ask a child to choose between their languages. All languages 
-              are valuable and support each other. Strong home language skills predict strong Finnish acquisition. 
-              The goal is addition (Finnish+), not subtraction (Finnish instead of home languages).
+              <strong>Key Principle:</strong> All languages are valuable and support each other. 
+              Strong home language skills help Finnish learning. The goal is addition (Finnish+), 
+              not replacement.
             </p>
           </div>
         </Card>
