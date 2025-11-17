@@ -37,10 +37,10 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-accent/20 to-secondary/30 relative">
-      {/* Hero Background */}
+      {/* Hero Background with flowers */}
       <div 
-        className="absolute inset-0 bg-cover bg-center opacity-20 pointer-events-none"
-        style={{ backgroundImage: `url(${heroBg})` }}
+        className="absolute inset-0 bg-cover bg-center opacity-15 pointer-events-none"
+        style={{ backgroundImage: `url(${contentBg})` }}
       />
       
       {/* Hero Section */}
