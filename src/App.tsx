@@ -8,6 +8,7 @@ import Assessment from "./pages/Assessment";
 import Results from "./pages/Results";
 import Activities from "./pages/Activities";
 import MultilingualSupport from "./pages/MultilingualSupport";
+import DailyCare from "./pages/DailyCare";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/results" element={<Results />} />
           <Route path="/activities" element={<Activities />} />
           <Route path="/multilingual" element={<MultilingualSupport />} />
+          <Route path="/daily" element={<DailyCare />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

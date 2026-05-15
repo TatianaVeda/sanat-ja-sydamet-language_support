@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useNavigate } from "react-router-dom";
-import { Brain, Heart, BookOpen, Languages, ArrowRight, Flower } from "lucide-react";
+import { Brain, Heart, BookOpen, Languages, ArrowRight, Flower, Sparkles } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 import contentBg from "@/assets/content-bg.jpg";
 import daisyLogo from "@/assets/daisy-logo.png";
@@ -10,6 +10,14 @@ const Index = () => {
   const navigate = useNavigate();
 
   const menuItems = [
+    {
+      icon: Sparkles,
+      title: "Daily Check-in with Daisy 🌼",
+      description: "A tiny daily mood check and ready-to-use tips for moments like 'new sibling', 'we just moved', or 'daycare is hard'",
+      action: () => navigate("/daily"),
+      buttonText: "Open Daily Care",
+      gradient: "from-pink-500/10 to-yellow-500/10",
+    },
     {
       icon: Brain,
       title: "Child Assessment",
