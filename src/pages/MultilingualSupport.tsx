@@ -5,9 +5,20 @@ import { Button } from "@/components/ui/button";
 import { Home, Brain, Languages, ExternalLink, Video, BookOpen } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { multilingualSupportActivities } from "@/data/practicalRecommendations";
+import { useJsonLd } from "@/hooks/useJsonLd";
 
 const MultilingualSupport = () => {
   const navigate = useNavigate();
+  useJsonLd({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: "Supporting Multilingual Children",
+    description:
+      "Strategies and resources for children navigating multiple home languages while learning Finnish at daycare.",
+    url: "https://sanat-ja-sydamet.lovable.app/multilingual",
+    author: { "@type": "Person", name: "Tatiana Vedishcheva" },
+    isPartOf: { "@type": "WebSite", name: "Sanat ja Sydämet", url: "https://sanat-ja-sydamet.lovable.app/" },
+  });
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5 py-12">
