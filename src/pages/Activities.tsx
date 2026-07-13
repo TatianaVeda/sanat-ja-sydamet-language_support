@@ -1,4 +1,5 @@
 import { Card } from "@/components/ui/card";
+import Footer from "@/components/Footer";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Home, Lightbulb } from "lucide-react";
@@ -111,6 +112,7 @@ const Activities = () => {
             Back to Home
           </Button>
         </div>
+        <Footer />
       </div>
     </div>
   );

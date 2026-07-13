@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { useNavigate } from "react-router-dom";
 import { Brain, Heart, BookOpen, Languages, ArrowRight, Flower, Sparkles } from "lucide-react";
@@ -187,9 +188,7 @@ const Index = () => {
           </p>
         </Card>
 
-        <footer className="mt-10 text-center text-xs text-muted-foreground">
-          © {new Date().getFullYear()} Tatiana Vedishcheva. All rights reserved.
-        </footer>
+        <Footer />
       </div>
     </div>
   );

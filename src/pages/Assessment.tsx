@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Footer from "@/components/Footer";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -170,6 +171,7 @@ const Assessment = () => {
             <ArrowRight className="ml-2" />
           </Button>
         </div>
+        <Footer />
       </div>
     </div>
   );
