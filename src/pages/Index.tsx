@@ -186,6 +186,10 @@ const Index = () => {
             pediatricians) for comprehensive evaluation.
           </p>
         </Card>
+
+        <footer className="mt-10 text-center text-xs text-muted-foreground">
+          © {new Date().getFullYear()} Tatiana Vedishcheva. All rights reserved.
+        </footer>
       </div>
     </div>
   );
