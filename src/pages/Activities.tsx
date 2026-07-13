@@ -11,9 +11,20 @@ import {
   type PracticalActivity 
 } from "@/data/practicalRecommendations";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useJsonLd } from "@/hooks/useJsonLd";
 
 const Activities = () => {
   const navigate = useNavigate();
+  useJsonLd({
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Practical Activities & Exercises",
+    description:
+      "Evidence-based activities for stress relief, language support, and balanced support for young children at home and in daycare.",
+    url: "https://sanat-ja-sydamet.lovable.app/activities",
+    author: { "@type": "Person", name: "Tatiana Vedishcheva" },
+    isPartOf: { "@type": "WebSite", name: "Sanat ja Sydämet", url: "https://sanat-ja-sydamet.lovable.app/" },
+  });
 
   const renderActivities = (activities: PracticalActivity[], title: string, description: string) => (
     <div>
