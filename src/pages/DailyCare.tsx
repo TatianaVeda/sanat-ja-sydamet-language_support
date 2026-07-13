@@ -1,4 +1,5 @@
 import { useState, useMemo } from "react";
+import Footer from "@/components/Footer";
 import { useNavigate } from "react-router-dom";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -471,6 +472,7 @@ const DailyCare = () => {
             🌼 Come back tomorrow — Daisy will be here with a fresh check-in.
           </p>
         </Card>
+        <Footer />
       </div>
     </div>
   );

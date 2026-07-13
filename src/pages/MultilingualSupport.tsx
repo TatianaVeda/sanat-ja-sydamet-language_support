@@ -1,4 +1,5 @@
 import { Card } from "@/components/ui/card";
+import Footer from "@/components/Footer";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Home, Brain, Languages, ExternalLink, Video, BookOpen } from "lucide-react";
@@ -332,6 +333,7 @@ const MultilingualSupport = () => {
             </p>
           </div>
         </Card>
+        <Footer />
       </div>
     </div>
   );

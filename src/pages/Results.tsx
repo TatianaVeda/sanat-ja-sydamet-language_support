@@ -1,4 +1,5 @@
 import { useLocation, useNavigate } from "react-router-dom";
+import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -296,6 +297,7 @@ const Results = () => {
             Back to Home
           </Button>
         </div>
+        <Footer />
       </div>
     </div>
   );
